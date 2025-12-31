@@ -122,16 +122,16 @@ export const PersonalHeader = () => {
 	);
 
 	return (
-		<header className="flex flex-col gap-4">
-			<div className="flex items-start justify-between gap-4">
+		<header className="flex flex-col gap-6 pb-6">
+			<div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
 				<Link
-					className="group flex flex-row items-start gap-3"
+					className="group flex flex-col items-center gap-4 sm:flex-row sm:items-start"
 					href="/"
 					aria-label={`${publication.author.name}'s blog home page`}
 				>
 					{publication.author.profilePicture && (
 						<img
-							className="block h-12 w-12 rounded-full ring-2 ring-pink-200 ring-offset-2 transition-all group-hover:ring-pink-400 dark:ring-pink-800 dark:ring-offset-neutral-950 dark:group-hover:ring-pink-600"
+							className="block h-20 w-20 rounded-full ring-4 ring-pink-200 ring-offset-2 transition-all group-hover:ring-pink-400 dark:ring-pink-800 dark:ring-offset-neutral-950 dark:group-hover:ring-pink-600"
 							alt={publication.author.name}
 							src={resizeImage(publication.author.profilePicture, {
 								w: 400,
@@ -140,18 +140,18 @@ export const PersonalHeader = () => {
 							})}
 						/>
 					)}
-					<div className="flex flex-col gap-1">
-						<h1 className="font-heading text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+					<div className="flex flex-col gap-2 text-center sm:text-left">
+						<h1 className="font-heading text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl">
 							{publication.title}
 						</h1>
 						{publication.descriptionSEO && (
-							<p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+							<p className="max-w-md text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
 								{publication.descriptionSEO}
 							</p>
 						)}
 					</div>
 				</Link>
-				<div className="flex items-center gap-4">
+				<div className="flex items-center justify-center gap-4 sm:justify-end">
 					{hasSocialLinks && socialLinks}
 					<ToggleTheme className="shrink-0" />
 				</div>
