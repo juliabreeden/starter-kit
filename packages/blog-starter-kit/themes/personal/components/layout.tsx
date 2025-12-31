@@ -12,7 +12,7 @@ export const Layout = ({ children }: Props) => {
 		<>
 			<Meta />
 			<Scripts />
-			<div className="min-h-screen bg-white dark:bg-neutral-950">
+			<div className="from-warm-50 min-h-screen bg-gradient-to-b via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-950">
 				<main>{children}</main>
 			</div>
 			<Analytics />
