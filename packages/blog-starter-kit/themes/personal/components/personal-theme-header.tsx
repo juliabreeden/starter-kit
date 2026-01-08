@@ -131,7 +131,7 @@ export const PersonalHeader = () => {
 				>
 					{publication.author.profilePicture && (
 						<img
-							className="block h-20 w-20 rounded-full ring-4 ring-pink-200 ring-offset-2 transition-all group-hover:ring-pink-400 dark:ring-pink-800 dark:ring-offset-neutral-950 dark:group-hover:ring-pink-600"
+							className="block h-20 w-20 rounded-full ring-4 ring-pink-400 ring-offset-2 transition-all group-hover:ring-pink-500 dark:ring-pink-700 dark:ring-offset-neutral-950 dark:group-hover:ring-pink-500"
 							alt={publication.author.name}
 							src={resizeImage(publication.author.profilePicture, {
 								w: 400,
